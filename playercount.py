@@ -12,7 +12,7 @@ while True:
 		
 		with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as s:
 			s.login(sender_email, "Some App Auth Code")
-			s.sendmail(sender_email, "received Email Address", "Email Content")
+			s.sendmail(sender_email, "receiver Email Address", "Email Content")
 	
 	players = status.players.online
 	print("{0} players - {1} ms".format(players, status.latency))
